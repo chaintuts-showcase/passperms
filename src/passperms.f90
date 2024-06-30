@@ -67,22 +67,22 @@ PROGRAM passperms
         ELSE IF (flag == "-c" .OR. flag == "--complexities") THEN
             CALL calc_complexities(results)
             IF (flag2 == "-f" .OR. flag2 == "--fast") THEN
-                CALL calc_times(results, HASHPOWER_LAPTOP, times)
+                CALL calc_times(results, HASHPOWER_PRO, times)
                 cracktime_label = CRACKTIME_LABEL_PRO
             ELSE
                 ! Default to consumer laptop cracking time
-                CALL calc_times(results, HASHPOWER_PRO, times)
+                CALL calc_times(results, HASHPOWER_LAPTOP, times)
                 cracktime_label = CRACKTIME_LABEL_LAPTOP
             END IF
             CALL output_results(COMPLEXITIES_LABEL, cracktime_label, COMPLEXITIES_HEADER, COMPLEXITIES, results, times)
         ELSE IF (flag == "-l" .OR. flag == "--lengths") THEN
             CALL calc_lengths(results)
             IF (flag2 == "-f" .OR. flag2 == "--fast") THEN
-                CALL calc_times(results, HASHPOWER_LAPTOP, times)
+                CALL calc_times(results, HASHPOWER_PRO, times)
                 cracktime_label = CRACKTIME_LABEL_PRO
             ELSE
                 ! Default to consumer laptop cracking time
-                CALL calc_times(results, HASHPOWER_PRO, times)
+                CALL calc_times(results, HASHPOWER_LAPTOP, times)
                 cracktime_label = CRACKTIME_LABEL_LAPTOP
             END IF
             CALL output_results(LENGTHS_LABEL, cracktime_label, LENGTHS_HEADER, LENGTHS, results, times)
