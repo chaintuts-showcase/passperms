@@ -30,6 +30,7 @@ Clean the build directory
 
 ### Requirements
 * Requires a terminal emulator
+* Requires Python for Python version
 
 ### Platforms
 * Windows
@@ -42,3 +43,11 @@ ____________
 ### CLI Usage
 * Run `passperms.exe -c/--complexities` to show variable complexity table
 * Run `passperms.exe -l/--lengths` to show variable lengths table
+* Run with `--fast` to show pro password cracking cluster crack times
+* Run with `--regular` to show consumer laptop crack times
+
+### Python CLI Usage
+* Run `python3 passpermspy.py --complexities` to show variable complexity table
+* Run `python3 passpermspy.py --lengths` to show variable length table
+* Run with `--fast` to show pro password cracking cluster crack times
+* Run with `--regular` to show consumer laptop crack times
